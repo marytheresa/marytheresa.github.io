@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <!--<title>Analog Clock</title>-->
+        
+        <link rel="stylesheet" href="css/displayTime.css"/>
+    </head>
+	<body onload = "loadFunction()">
+        <div class = "row">
+            <div class = "clock1">
+                <canvas id = "clock1" width = "400" height = "400">
+                    If you can see this message, it means that your browser does not support canvas. You may like to consider doing an update. 
+                </canvas>
+                <div>
+                    <p>
+                        Timezone: <input id = "textbox" class="timeZones" value="(UTC+01.00)"/> (UTC+01.00) West Central Africa 
+                    </p>
+                </div>
+                <!--<p>
+                    Time:
+                </p>-->
+            </div>
+            <div class = "clock2">
+                <canvas id = "clock2" width = "400" height = "400">
+                    If you can see this message, it means that your browser does not support canvas. You may like to consider doing an update.
+                </canvas>
+                <div  class="time-zone-opts">
+                    <label for="Time-Zone" class = "dropdown">Time-Zone:</label>
+                    <select name="zones" class="timeZones">
+                        <option value="-12">(UTC-12.00)</option>
+                        <option value="-11">(UTC-11.00)</option>
+                        <option value="-10">(UTC-10.00)</option>
+                        <option value="-9">(UTC-09.00)</option>
+                        <option value="-8">(UTC-08.00)</option>
+                        <option value="-7">(UTC-07.00)</option>
+                        <option value="-6">(UTC-06.00)</option>
+                        <option value="-5">(UTC-05.00)</option>
+                        <option value="-4">(UTC-04.00)</option>
+                        <option value="-3">(UTC-03.00)</option>
+                        <option value="-2">(UTC-02.00)</option>
+                        <option value="-1">(UTC-01.00)</option>
+                        <option value="0">(UTC+00.00)</option>
+                        <option value="1">(UTC+01.00)</option>
+                        <option value="2">(UTC+02.00)</option>
+                        <option value="3">(UTC+03.00)</option>
+                        <option value="4">(UTC+04.00)</option>
+                        <option value="5">(UTC+05.00)</option>
+                        <option value="6">(UTC+06.00)</option>
+                        <option value="7">(UTC+07.00)</option>
+                        <option value="8">(UTC+08.00)</option>
+                        <option value="9">(UTC+09.00)</option>
+                        <option value="10">(UTC+10.00)</option>
+                        <option value="11">(UTC+11.00)</option>
+                        <option value="12">(UTC+12.00)</option>
+                    </select>
+                    </select>
+                </div>
+            </div>
+            <div class = "clock3">
+                <canvas id = "clock3" width = "400" height = "400">
+                    If you can see this message, it means that your browser does not support canvas. You may like to consider doing an update. 
+                </canvas>
+                <div  class="time-zone-opts">
+                    <label for="Time-Zone" class = "dropdown">Time-Zone:</label>
+                    <select name="zones" class="timeZones">
+                        <option value="-12">(UTC-12.00)</option>
+                        <option value="-11">(UTC-11.00)</option>
+                        <option value="-10">(UTC-10.00)</option>
+                        <option value="-9">(UTC-09.00)</option>
+                        <option value="-8">(UTC-08.00)</option>
+                        <option value="-7">(UTC-07.00)</option>
+                        <option value="-6">(UTC-06.00)</option>
+                        <option value="-5">(UTC-05.00)</option>
+                        <option value="-4">(UTC-04.00)</option>
+                        <option value="-3">(UTC-03.00)</option>
+                        <option value="-2">(UTC-02.00)</option>
+                        <option value="-1">(UTC-01.00)</option>
+                        <option value="0">(UTC+00.00)</option>
+                        <option value="1">(UTC+01.00)</option>
+                        <option value="2">(UTC+02.00)</option>
+                        <option value="3">(UTC+03.00)</option>
+                        <option value="4">(UTC+04.00)</option>
+                        <option value="5">(UTC+05.00)</option>
+                        <option value="6">(UTC+06.00)</option>
+                        <option value="7">(UTC+07.00)</option>
+                        <option value="8">(UTC+08.00)</option>
+                        <option value="9">(UTC+09.00)</option>
+                        <option value="10">(UTC+10.00)</option>
+                        <option value="11">(UTC+11.00)</option>
+                        <option value="12">(UTC+12.00)</option>
+                    </select>
+                    </select>
+                </div>
+                <button class="btn" id="btnChange" onclick="changeTime()">Get Time</button>
+            </div>
+        </div>
+    </body>
+    <script src="js/displayTime.js"></script>
+    <!--<script>
+        /*document.getElementById('btnChange').addEventListener('click', function() {
+            var e = document.getElementsByClassName("timeZones");
+            setInterval(function() {
+                clock3.displayTime(function(){this.checkTimezone(e[2].value)});
+                clock2.displayTime(function(){this.checkTimezone(e[1].value)});
+                clock1.displayTime(function(){this.checkTimezone(e[0].value)});
+            }, 1000)
+        });
+    </script>-->
+</html>
+
+
