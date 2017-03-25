@@ -1,25 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-        <!--<title>Analog Clock</title>-->
-        
         <link rel="stylesheet" href="css/displayTime.css"/>
     </head>
 	<body onload = "loadFunction()">
         <div class = "row">
-            <div class = "clock1">
-                <canvas id = "clock1" width = "400" height = "400">
-                    If you can see this message, it means that your browser does not support canvas. You may like to consider doing an update. 
-                </canvas>
-                <div>
-                    <p>
-                        Timezone: <input id = "textbox" class="timeZones" value="(UTC+01.00)"/> (UTC+01.00) West Central Africa 
-                    </p>
-                </div>
-                <!--<p>
-                    Time:
-                </p>-->
-            </div>
             <div class = "clock2">
                 <canvas id = "clock2" width = "400" height = "400">
                     If you can see this message, it means that your browser does not support canvas. You may like to consider doing an update.
@@ -55,6 +40,14 @@
                     </select>
                     </select>
                 </div>
+            </div>
+            <div class = "clock1">
+                <canvas id = "clock1" width = "400" height = "400">
+                    If you can see this message, it means that your browser does not support canvas. You may like to consider doing an update. 
+                </canvas>
+                <p>
+                    Timezone: <input id = "textbox" class="timeZones" value="(UTC+01.00)"/> (UTC+01.00) West Central Africa 
+                </p>
             </div>
             <div class = "clock3">
                 <canvas id = "clock3" width = "400" height = "400">
@@ -96,16 +89,6 @@
         </div>
     </body>
     <script src="js/displayTime.js"></script>
-    <!--<script>
-        /*document.getElementById('btnChange').addEventListener('click', function() {
-            var e = document.getElementsByClassName("timeZones");
-            setInterval(function() {
-                clock3.displayTime(function(){this.checkTimezone(e[2].value)});
-                clock2.displayTime(function(){this.checkTimezone(e[1].value)});
-                clock1.displayTime(function(){this.checkTimezone(e[0].value)});
-            }, 1000)
-        });
-    </script>-->
 </html>
 
 

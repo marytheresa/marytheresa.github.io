@@ -3,6 +3,7 @@ var Clock = function(timezone, canvas) {
     this.canvas = canvas
 }
 
+
 Clock.prototype.displayTime = function(val) {
     var date = new Date();
 	var h = date.getHours() + val;
@@ -42,7 +43,6 @@ Clock.prototype.displayTime = function(val) {
     function hourMarkings(armLength) {
         for (var i = 0; i < 12; i++) {
             angleInRadians = (2 * Math.PI * i / 12) - (Math.PI / 2);
-            //angleInRadians = ((i / 12) * 2 * Math.PI * radius)-(Math.PI / 2);
             ctx.lineWidth = 10;
             ctx.beginPath();
 
@@ -65,23 +65,17 @@ var clock2 = new Clock("(UTC+01)", document.getElementById("clock2"));
 var clock3 = new Clock("(UTC+01)", document.getElementById("clock3"));
 
 function loadFunction() {
-    // var date = new Date();
-    // console.log(">>>>>>>>>>", date);
-    // console.log(date.getTimezoneOffset() / 60);
-    // console.log(Date.now());
     setInterval(function() {
         clock1.displayTime(0);
     }, 1000)
 }
 
-//document.addEventListener("DOMContentLoaded",  setInterval(clock1.displayTime(1), 1000))//; clock2.displayTime(-12); clock3.displayTime(-12)});
-
 function changeTime() {
     var date = new Date();
     var e = document.getElementsByClassName("timeZones");
     setInterval(function() {
-        clock3.displayTime(Number(e[2].value));
-        clock2.displayTime(Number(e[1].value));
+        clock3.displayTime(Number(e[1].value));
+        clock2.displayTime(Number(e[0].value));
         clock1.displayTime(0);
     }, 1000)
 }
